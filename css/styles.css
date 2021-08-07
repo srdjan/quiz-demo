@@ -1,0 +1,54 @@
+body {
+  --bkgd: #fff;
+  --frgd: #333;
+  --accent: #fc4;
+  font-family: Lora,serif;
+  color: var(--frgd);
+  --max-width: 900px;
+  --col-width: 60%;
+  font-size: 1.1em;
+  line-height: 2;
+  direction: ltr;
+  box-sizing: border-box;
+  padding-top: 5em;
+  padding-left: 10em;
+}
+.span { /* not used */
+    padding: 1rem 2rem;
+    background-color: var(--accent);
+    border-radius: .25em;
+    text-align: center;
+}
+
+.fab-four {
+  --threshold: 600px;
+  --gap: 1rem;
+  --items: 3;
+  --gap-spacing: calc(var(--gap) * (var(--items) - 1));
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--gap);
+}
+
+.fab-four > * {
+  min-width: calc((100% - var(--gap-spacing)) / var(--items));
+  max-width: 100%;
+  width: calc((var(--threshold) - 100%) * 100000);
+}
+
+.day, .month, .year {
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  border-style: none;
+}
+.question {
+  min-width: 60%;
+  padding: 5px;
+  border-style: none;
+}
+
+.answer {
+  padding: 5px;
+  border-style: none;
+}
